@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_content.css">
+    <link rel="stylesheet" href="style_media.css">
+    <script src="script.js"></script>
+    <script src="templates_functions.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="icons/instagram-32.ico">
+    <title>Insta-kg</title>
+</head>
+
+<body onload="showStory(); showPosts(); renderFriendRequest()">
+    <!-- Header -->
+    <div class="header_container">
+        <header class="header">
+            <div class="logo" onclick="window.location.reload()">
+                <div><img src="icons/instagram-32.ico"></div>
+                <h1 class="logo"> Insta-kg</h1>
+            </div>
+            <input class="searchNavBar" type="text" placeholder="Search...">
+            <nav class="headerIcons">
+                <li class="nav-1" onclick="test()" title="Home"><img src="icons/house-2-32.ico">
+                    <h3>Home</h3>
+                </li>
+                <li class="nav-2" onclick="test()" title="Search"><img src="icons/search-2-32.ico">
+                    <h3>Search</h3>
+                </li>
+                <li class="nav-3" onclick="test()" title="Explore"><img src="icons/compass-3-32.ico">
+                    <h3>Explore</h3>
+                </li>
+                <li class="nav-4" onclick="test()" title="Messages"><img src="icons/arrow-57-32.ico">
+                    <h3>Messages</h3>
+                </li>
+                <li class="nav-5" classs="notifications" onclick="test()" title="Notifications"><img
+                        src="icons/heart-32.ico">
+                    <h3>Notifications</h3>
+                </li>
+                <li class="nav-6" onclick="test()" title="Create"><img src="icons/add-32.ico">
+                    <h3>Create</h3>
+                </li>
+                <li class="nav-7" onclick="test()" title="Profile">
+                    <div class="photoAccountHeader">
+                        <img src="img/me 3.jpg">
+                    </div>
+                    <h3>Profile</h3>
+                </li>
+            </nav>
+        </header>
+        <div class="more" title="More">
+            <button onclick="test()"><img src="icons/menu-4-32.ico"></button>
+        </div>
+    </div>
+
+    <!-- Feed-Back for Navbar -->
+    <div onclick="closeTest()" id="clickFeedBack" class="clickFeedBackContainer d-none">
+        <div onclick="closeTest()" class="clickFeedBack">
+            <h2>I wish you a great day!</h2>
+            <h3>This content appears only as a respons for the 'onclick'- functions!</h3>
+            <p>(Click to close)</p>
+        </div>
+    </div>
+
+    <!-- @Media rotation-->
+    <div class="ratationBody">
+        <!-- Main Container -->
+        <main class="main">
+            <div class="story_container mainBorders">
+                <div class="storysHolder">
+                    <button class="sb sbLeft" onclick="sbLeft()"><img src="icons/arrow-left-2-32.ico"></button>
+                    <div class="scroll-storys">
+                        <div id="storyImg" class="storyImg"></div>
+                    </div>
+                    <button class="sb sbRight" onclick="sbRight()"><img src="icons/arrow-right-2-32.ico"></button>
+                    <div id="carouselContainerID" class="carouselContainer d-none">
+                        <button title="Close" class="closeCarousel" onclick="closeCarousel()">&#10007;</button>
+                        <div id="fullsizeStoryContaineID" class="fullsizeStoryContaine"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="post_container" class="post_container"></div>
+        </main>
+
+        <!-- Footer -->
+        <div class="footer_container">
+            <div class="friendRequest_container">
+                <div class="accountHolder ">
+                    <div class=" personRequest">
+                        <img src="img/me 3.jpg">
+                        <p id="ownerID"></p>
+                    </div>
+                    <button onclick="test()">Switch</button>
+                </div>
+                <h3>Suggestions For You</h3>
+                <div id="friendRequestID" class="friendRequest"></div>
+            </div>
+            <footer class="footer">
+                <div class="logoFooter" onclick="window.location.reload()">
+                    <div><img src="icons/instagram-32.ico"></div>
+                    <h1 class="">Insta-kg</h1>
+                </div>
+                <div>
+                    <p>@Copyright 2022 - 'Insta-kg' </p>
+                    <p></p>
+                </div>
+                <div class="footerLinks">
+                    <a href="#top">Impressum</a>
+                    <a href="#top">AGB</a>
+                    <a href="#top">Datenschutz</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>
